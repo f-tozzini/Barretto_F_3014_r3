@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2018 at 03:43 AM
+-- Generation Time: Mar 02, 2018 at 07:14 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.6
 
@@ -1030,17 +1030,22 @@ CREATE TABLE `tbl_user` (
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
   `user_lastlog` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_fail` varchar(100) NOT NULL DEFAULT '0',
-  `user_level` int(11) NOT NULL
+  `user_level` int(11) NOT NULL,
+  `user_login` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_lastlog`, `user_fail`, `user_level`) VALUES
-(1, 'flavia', 'flavia', '1234', 'flavia@flavia.com', '2018-02-09 21:20:40', '::1', '2018-02-15 04:20:54', '0', 0),
-(15, 'fla', 'flavia', 'MG?t7fQ&', '', '2018-02-23 01:36:58', 'no', '2018-02-23 01:36:58', '0', 0),
-(16, 'fla', 'flavia', '#i,%):yp', '', '2018-02-23 02:07:45', 'no', '2018-02-23 02:07:45', '0', 0);
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_lastlog`, `user_fail`, `user_level`, `user_login`) VALUES
+(1, 'flavia', 'flavia', '1234', 'flavia@flavia.com', '2018-02-09 21:20:40', '::1', '2018-02-15 04:20:54', '0', 0, 0),
+(15, 'Kat', 'kat', 'lala', 'kat@lala', '2018-02-23 01:36:58', 'no', '2018-02-23 21:31:47', '0', 0, 0),
+(16, 'Lalala', 'lala', '.5GU@bQo', '', '2018-03-01 04:34:04', 'no', '2018-03-01 04:34:04', '0', 0, 0),
+(17, 'Test', 'redirect', '$qT,2JY+', '', '2018-03-02 17:04:37', 'no', '2018-03-02 17:04:37', '0', 0, 0),
+(18, 'test2', 'lalala', '4zN%Ke-d', '', '2018-03-02 17:52:15', 'no', '2018-03-02 17:52:15', '0', 1, 0),
+(19, 'fla', 'flavia2', 'Ry*F+d$o', '', '2018-03-02 18:08:50', 'no', '2018-03-02 18:08:50', '0', 1, 0),
+(20, 'fla', 'flavia', 'yRk9g0_c', '', '2018-03-02 18:12:34', 'no', '2018-03-02 18:12:34', '0', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -1237,7 +1242,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
