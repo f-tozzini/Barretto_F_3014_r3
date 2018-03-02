@@ -6,5 +6,6 @@
 	require_once('user.php');
 	require_once('mail.php');
 	require_once('password.php');
+	require_once('count_login.php');
 
 ?>

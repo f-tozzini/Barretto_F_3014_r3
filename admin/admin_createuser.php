@@ -7,12 +7,14 @@
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $email = trim($_POST['email']);
+    $login_num = trim($_POST['user_login']);
     $lvllist = $_POST['lvllist'];
 
     if(empty($lvllist)){
       $message = "Please select a user level";
     } else {
-      $result = createUser($fname, $username, $password, $email, $lvllist);
+      $login_num = 1;
+      $result = createUser($fname, $username, $password, $email, $login_num, $lvllist);
       $message = $result;
     }
   }

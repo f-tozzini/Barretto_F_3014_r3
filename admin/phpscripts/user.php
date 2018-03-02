@@ -1,13 +1,13 @@
 <?php
-    function createUser($fname, $username, $email, $lvllist) {
+    function createUser($fname, $username, $email, $login_num, $lvllist) {
       include('connect.php');
       $generatePas = genPassword(8);
       // $hashPas = hashPassword();
 
       // chamar funcao de cripto - quando eu defino quem vai ser criptografado
-      $userstring = "INSERT INTO tbl_user (user_fname, user_name, user_pass, user_email,
+      $userstring = "INSERT INTO tbl_user (user_fname, user_name, user_pass, user_email, user_login,
         user_date, user_ip, user_level) VALUES ('${fname}', '${username}',
-        '${generatePas}', '${email}', NOW(), 'no', '${lvllist}')";
+        '${generatePas}', '${email}', '${login_num}', NOW(), 'no', '${lvllist}')";
 
         // echo $userstring;
         $userquery = mysqli_query($link, $userstring);
