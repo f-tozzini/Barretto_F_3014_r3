@@ -1,8 +1,11 @@
 <?php
-  // function countLogin($username, $password, $ip){
-  //   if logIn() == true
-  //   $login_num = ($_SESSION['user_login'] + 1;
-  // }
+  function countLogin(){
+    $login_num = count(logIn($username, $password, $ip));
+    return $login_num;
+
+    // if logIn($username, $password, $ip) == true
+    // $login_num = ($_SESSION['user_login'] + 1;
+  }
 
 
 //What I'm trying to do = I added a new field to a database to count the login attempts.

@@ -13,7 +13,6 @@
     if(empty($lvllist)){
       $message = "Please select a user level";
     } else {
-      $login_num = 1;
       $result = createUser($fname, $username, $password, $email, $login_num, $lvllist);
       $message = $result;
     }
